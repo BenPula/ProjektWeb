@@ -1,0 +1,251 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'adihausbold', Helvetica;
+	background: rgb(46, 61, 63);
+	color: white;
+	/* background-image: url("images/background.png");
+	background-repeat: repeat;
+  	background-size: 100%; */
+}
+
+@font-face {
+    font-family: 'adihausbold';
+    src: url('font/adihaus/adihaus-bold.woff-webfont.woff2') format('woff2'),
+         url('font/adihaus/adihaus-bold.woff-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'tex_gyre_adventorregular';
+    src: url('font/adidas/texgyreadventor-regular-webfont.woff2') format('woff2'),
+         url('font/adidas/texgyreadventor-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+.menu{
+	visibility: hidden;
+}
+
+/* Header */
+
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+
+.Name{
+	display: flex;
+
+}
+
+.adidaslogo img{
+	padding-right: 12px;
+	width: 90px;
+}
+
+.Name h1{
+	font-size: 40px;
+	font-family: 'tex_gyre_adventorregular';
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+.Pages ul{
+	list-style: none;
+	display: flex;
+}
+
+.Pages ul li{
+	padding: 0px 10px;
+	padding-top: 20px;
+}
+
+.Pages a{
+	font-size: 20px;
+}
+
+/* Showcase Future Messi */
+
+.showcase{
+	width: 100%;
+	height: 557px;
+	background: url("images/messiballondor.png") no-repeat center center/cover;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	
+}
+
+.case{
+	position: absolute;
+  	bottom: 0px;
+}
+
+.showcase a{
+	color: rgb(188, 132, 83);
+	background: white;
+	padding: 10px 10px 10px 10px;
+	margin-bottom: 10px;
+}
+
+.showcase p{
+	color: rgb(188, 132, 83);
+	background: rgb(26, 26, 30);
+
+	padding: 10px 10px 10px 10px;
+}
+
+/* News */
+
+.news{
+	color: white;
+	background: black;
+}
+
+.boxes{
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 50px;
+	justify-content: space-between;
+
+	padding: 50px 50px 50px 50px;
+}
+
+.boxes h1{
+	background: gray;
+	display: inline-block;
+	padding: 10px 10px;
+
+	border-radius: 10px 10px 0 0;
+}
+
+.box{
+	display: flex;
+	background-color: white;
+	color: black;
+
+	text-align: center;
+
+	border-radius: 10px;
+}
+
+.box p{
+	margin: auto;
+}
+
+.box img{
+	width: 20%;
+	height: 20%;
+	display: block;
+
+  	background-color: rgb(227, 6, 19);
+
+  	border-radius: 0px 0px 0px 10px;
+}
+
+/* Footer */
+
+.footer{
+	background-color: rgb(96, 168, 94);
+}
+
+.footer div{
+	display: flex;
+	align-items: center;
+	margin-left: 100px;
+	margin-right: 40px;
+}
+
+.footer ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer li {
+	margin-right: 50px;
+	margin-bottom: 20px;
+}
+
+/* Responsive */
+
+@media(max-width: 700px) {
+
+	.menu{
+		visibility: visible;
+		cursor: pointer;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+	}
+
+
+	.Name h1{
+		display: none;
+	}
+
+	.menu i:hover {
+		color: black;
+	}
+
+	.main-nav ul.main-menu {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgb(96, 168, 94);
+		width: 50%;
+		height: 100%;
+		border-right: #ccc 1px solid;
+		opacity: 0.9;
+		padding: 30px;
+		transform: translateX(-500px);
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.main-nav ul.main-menu li {
+		padding: 10px;
+		border-bottom: #ccc solid 1px;
+		font-size: 14px;
+	}
+
+	.main-nav ul.main-menu li:last-child {
+		border-bottom: 0;
+	}
+
+	.main-nav ul.main-menu.show{
+		transform: translateX(-20px);
+	}
+
+	.showcase p{
+		display: none;
+	}
+
+	.box img{
+		width: 100%;
+		height: 100%;
+	}
+
+	.box p{
+		display: none;
+	}
+}

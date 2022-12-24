@@ -1,0 +1,1 @@
+document.querySelector('.menu').addEventListener ('click', () => document.querySelector('.main-menu').classList.toggle('show'));

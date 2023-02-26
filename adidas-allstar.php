@@ -28,7 +28,7 @@
 					<li><a href="about-allstar.php">About Adidas All-Star</a></li>
 					<li><a href="products-allstar.php">Products</a></li>
 					<li><a href="news-allstar.php">News</a></li>
-					<li><a href="https://www.adidas.com/us/help">Contact Us</a></li>
+					<li><a href="contact us.php">Contact Us</a></li>
 				</ul>
 			</nav>
 		</div>

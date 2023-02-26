@@ -12,9 +12,9 @@
 	<header>
 		<div class="Name">
 			<div class="adidaslogo">
-				<a href="adidas-allstar.html"><img src="images/adidasfootballcollectivewhitelogo.png" alt=""></a>
+				<a href="adidas-allstar.php"><img src="images/adidasfootballcollectivewhitelogo.png" alt=""></a>
 			</div>
-			<a href="adidas-allstar.html"><h1>Adidas All-Star</h1></a>
+			<a href="adidas-allstar.php"><h1>Adidas All-Star</h1></a>
 		</div>
 		<br>
 		<div class="menu">
@@ -23,9 +23,9 @@
 		<div class="Pages">
 			<nav class="main-nav">
 				<ul class="main-menu">
-					<li><a href="about-allstar.html">About Adidas All-Star</a></li>
-					<li><a href="products-allstar.html">Products</a></li>
-					<li><a href="news-allstar.html">News</a></li>
+					<li><a href="about-allstar.php">About Adidas All-Star</a></li>
+					<li><a href="products-allstar.php">Products</a></li>
+					<li><a href="news-allstar.php">News</a></li>
 					<li><a href="https://www.adidas.com/us/help">Contact Us</a></li>
 				</ul>
 			</nav>

@@ -4,12 +4,11 @@ session_start();
 $email = "";
 $errors = array();
 
-// connect to database
 $db = mysqli_connect('localhost', 'root', '', 'project');
 
-// REGISTER USER
+// REGISTRO
 if (isset($_POST['email']) && isset($_POST['password'])) {
-  // receive all input values from the form
+
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
 
@@ -25,15 +24,14 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
-  if ($user) { // if user exists
+  if ($user) { 
     if ($user['email'] === $email) {
       array_push($errors, "Email already exists");
     }
   }
 
   if (count($errors) == 0) {
-    $password = md5($password); // encrypt password
-
+    $password = md5($password); 
     $query = "INSERT INTO users (email, password) 
               VALUES('$email', '$password')";
     mysqli_query($db, $query);
@@ -44,7 +42,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
   }
 }
 
-// LOGIN USER
+// LOGIN
 if (isset($_POST['login_user'])) {
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
@@ -58,16 +56,16 @@ if (isset($_POST['login_user'])) {
   }
 
   if (count($errors) == 0) {
-    $password = md5($password); // not secure, should use a stronger algorithm
+    $password = md5($password); 
     $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
     $results = mysqli_query($db, $query);
     if (mysqli_num_rows($results) == 1) {
       $user = mysqli_fetch_assoc($results);
       $_SESSION['email'] = $email;
-      $_SESSION['id'] = $user['id']; // assuming that the user's id is stored in the database as 'id'
+      $_SESSION['id'] = $user['id']; 
       $_SESSION['success'] = "You are now logged in";
       if ($user['id'] == 1) {
-        header('location: dashboard.php');
+        header('location: admin/dashboard.php');
         exit();
       } else {
         header('location: adidas-allstar.php');
@@ -78,5 +76,3 @@ if (isset($_POST['login_user'])) {
     }
   }
 }
-
-?>
